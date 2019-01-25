@@ -22,4 +22,4 @@ for i in range(len(ĉeno)):
         vortoAE=substantivoSingulara(ĉeno[i])
         print(ĉeno[i] + " tradukita al Arkaikam estus: " + vortoAE)
     else:
-        print(ĉeno[i] + ' ne estas substantivo')
+        print(ĉeno[i] + ' ne estas substantivo') #ĉi tio forigotos
