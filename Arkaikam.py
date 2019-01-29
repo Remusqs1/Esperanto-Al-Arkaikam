@@ -10,6 +10,8 @@ frazo=Frazo.lower()
 ĉeno=frazo.split(" ")
 print(ĉeno)#Forigota, nune nur por vidi la ĉenon
 
+pronomoj(ĉeno) #Legas la frazeron kaj diras ĉu ĝi estas pronomo, estontece ĝi devos redoni tradukitan pronomon
+
 for i in range(len(ĉeno)):
 
     lastaLitero=ĉeno[i][-1] #Legas la lastan literon de vorto
