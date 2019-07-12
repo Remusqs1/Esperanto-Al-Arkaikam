@@ -11,7 +11,7 @@ frazo=Frazo.lower()
 print(ĉeno) #TODO Forigota, nune nur por vidi la ĉenon
 
 pronomoj(ĉeno) #Legas la frazeron kaj diras ĉu ĝi estas pronomo, estontece ĝi devos redoni tradukitan pronomon
-#Todo pronomoj() devos forigi la frazeron el la listo de vortoj "frazo"
+#Todo pronomoj() kaj aliaj metodoj devos forigi la frazeron el la listo de vortoj "frazo"
 
 #Forigas la difinitan artikolon "la", TODO kie enmeti cxi tion unue?
 for i in range(len(ĉeno)):
