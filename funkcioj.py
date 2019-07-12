@@ -16,3 +16,12 @@ def pronomoj(vorto):
             print (vorto[i] + ' estas pronomo')
         else:
             print (vorto[i] + ' NE estas pronomo')
+
+def artikoloDifinitaForigado(vorto):
+    for i in range(len(vorto)):
+        if vorto[i] == "la":
+            print (vorto[i] + ' estas difinita artikolo')
+            vorto.remove(vorto[i])
+            return print ("Listo: " + str(vorto))
+
+       
