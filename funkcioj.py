@@ -6,43 +6,52 @@ def substantivoSingulara(matrico):
     for i in range(len(matrico)):
         if matrico[i][-1]=="o":
             index=matrico.index(matrico[i])
-            Ĉenom=(matrico[i]+"m").capitalize() #Arkaike, substantivo estas ĉiam skribita majuskle je kia ajn kazo
+            Vortom=(matrico[i]+"m").capitalize() #Arkaike, substantivo estas ĉiam skribita majuskle je kia ajn kazo
             matrico.remove(matrico[i])
-            matrico.insert(index, Ĉenom)
-    print(matrico)#Forigota
+            matrico.insert(index, Vortom)
     return (matrico)
 
-def pronomoj(vorto):
-    #TODO anstataŭi la pronomon en la liston
-    for i in range(len(vorto)):
-        if vorto[i] in pronomaListo:
-            if (vorto[i]== "mi"):
-                vorto[i]="mihi"
-            elif (vorto[i]== "vi"):
-                vorto[i]="wos"
-            elif (vorto[i]== "ci"):
-                vorto[i]="tu"
-            elif (vorto[i]== "li"):
-                vorto[i]="lùi"
-            elif (vorto[i]== "ŝi"):
-                vorto[i]="eshi"
-            elif (vorto[i]== "ĝi"):
-                vorto[i]="eghi"
-            elif (vorto[i]== "ili"):
-                vorto[i]="ilùi"
-            elif (vorto[i]== "ni"):
-                vorto[i]="nos"
-            elif (vorto[i]== "si"):
-                vorto[i]="sihi"
-            print (vorto[i] + ' estas pronomo')
-        else:
-            print (vorto[i] + ' NE estas pronomo')
+def substantivoPlurala(matrico):
+    for i in range(len(matrico)):
+        if matrico[i][-1]=="j":
+            index=matrico.index(matrico[i])
+            matrico[i]=matrico[i][:-1]
+            Vortoy=(matrico[i]+"y").capitalize() #Arkaike, substantivo estas ĉiam skribita majuskle je kia ajn kazo
+            matrico.remove(matrico[i])
+            matrico.insert(index, Vortoy)
+    return (matrico)
 
-def artikoloDifinitaForigado(vorto):
-    for i in range(len(vorto)):
-        if vorto[i] == "la":
-            print (vorto[i] + ' estas difinita artikolo')
-            vorto.remove(vorto[i])
-            return print ("Listo: " + str(vorto))
+def pronomoj(matrico):
+    for i in range(len(matrico)):
+        index=matrico.index(matrico[i])        
+        if matrico[i] in pronomaListo:
+            if (matrico[i]== "mi"):
+                matrico[i]="mihi"
+            elif (matrico[i]== "vi"):
+                matrico[i]="wos"
+            elif (matrico[i]== "ci"):
+                matrico[i]="tu"
+            elif (matrico[i]== "li"):
+                matrico[i]="lùi"
+            elif (matrico[i]== "ŝi"):
+                matrico[i]="eshi"
+            elif (matrico[i]== "ĝi"):
+                matrico[i]="eghi"
+            elif (matrico[i]== "ili"):
+                matrico[i]="ilùi"
+            elif (matrico[i]== "ni"):
+                matrico[i]="nos"
+            elif (matrico[i]== "si"):
+                matrico[i]="sihi"
 
-       
+def artikoloDifinitaForigado(matrico):
+    for i in range(len(matrico)):
+        if matrico[i] == "la":
+            matrico.remove(matrico[i])
+            return matrico
+
+def kunigado(matrico):
+    frazoT=" "
+    frazoT=frazoT.join(matrico)
+    print(frazoT)
+    return frazoT

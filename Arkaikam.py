@@ -10,10 +10,13 @@ frazo=input("Enigu vian frazon: ").lower()
 
 #Jen funkcio por scii ĉu vorto estas substantivo aŭ ne, se jes, konjugacias arkaike
 substantivoSingulara(ĉeno)
+substantivoPlurala(ĉeno) #ĉu esperas substantivo estas plurala
 
 pronomoj(ĉeno) #Legas la frazeron kaj diras ĉu ĝi estas pronomo
 #TODO pronomoj() kaj aliaj metodoj devos anstataŭi la frazeron en la liston de vortoj "frazo"
 
 #Forigas la difinitan artikolon "la", TODO kie enmeti cxi tion unue?
-for i in range(len(ĉeno)):
-    artikoloDifinitaForigado(ĉeno)
+artikoloDifinitaForigado(ĉeno)
+
+#Ĉi tiu funkcio nepre devas esti la lasta. Ĝi kunigas la frazerojn kaj redonas tradukitan frazon
+kunigado(ĉeno)
