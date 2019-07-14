@@ -1,11 +1,21 @@
-# vorto=input("Enigu frazon: ") #Tio ĉi forigeblas, nur estas por ke 'vorto' eniru en la funkcio
-
 pronomaListo = ['mi', 'vi', 'ci', 'li', 'ŝi', 'ĝi', 'ili', 'ni', 'si']
+
+# TODO listo kaj traduko de specialaj vortoj
+
+def AŭŜanĝo(matrico):
+    for i in range(len(matrico)):
+        index=matrico.index(matrico[i])
+        if matrico[i][-2:]=="aŭ":
+            matrico[i]=matrico[i][:-2]
+            Vortez=(matrico[i]+"ez")
+            matrico.remove(matrico[i])
+            matrico.insert(index, Vortez)
+    return (matrico)
 
 def substantivoSingulara(matrico):
     for i in range(len(matrico)):
+        index=matrico.index(matrico[i])
         if matrico[i][-1]=="o":
-            index=matrico.index(matrico[i])
             Vortom=(matrico[i]+"m").capitalize() #Arkaike, substantivo estas ĉiam skribita majuskle je kia ajn kazo
             matrico.remove(matrico[i])
             matrico.insert(index, Vortom)
@@ -13,17 +23,31 @@ def substantivoSingulara(matrico):
 
 def substantivoPlurala(matrico):
     for i in range(len(matrico)):
+        index=matrico.index(matrico[i])
         if matrico[i][-1]=="j":
-            index=matrico.index(matrico[i])
             matrico[i]=matrico[i][:-1]
             Vortoy=(matrico[i]+"y").capitalize() #Arkaike, substantivo estas ĉiam skribita majuskle je kia ajn kazo
             matrico.remove(matrico[i])
             matrico.insert(index, Vortoy)
     return (matrico)
 
+def akuzativoPlurala(matrico):
+    for i in range(len(matrico)):
+        index=matrico.index(matrico[i])
+        if matrico[i][-2:]=="jn":
+            matrico[i]=matrico[i][:-2]
+            Vortoyn=(matrico[i]+"yn").capitalize() #Arkaike, substantivo estas ĉiam skribita majuskle je kia ajn kazo
+            matrico.remove(matrico[i])
+            matrico.insert(index, Vortoyn)
+        elif (matrico[i][-2:]=="on"): #Same sed ne plurale
+            Vorton=matrico[i].capitalize()
+            matrico.remove(matrico[i])
+            matrico.insert(index, Vorton)
+    return (matrico)
+
 def pronomoj(matrico):
     for i in range(len(matrico)):
-        index=matrico.index(matrico[i])        
+        index=matrico.index(matrico[i])
         if matrico[i] in pronomaListo:
             if (matrico[i]== "mi"):
                 matrico[i]="mihi"

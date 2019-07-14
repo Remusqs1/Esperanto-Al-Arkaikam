@@ -10,7 +10,9 @@ frazo=input("Enigu vian frazon: ").lower()
 
 #Jen funkcio por scii ĉu vorto estas substantivo aŭ ne, se jes, konjugacias arkaike
 substantivoSingulara(ĉeno)
-substantivoPlurala(ĉeno) #ĉu esperas substantivo estas plurala
+substantivoPlurala(ĉeno) #ĉu vorto estas substantivo kaj plurala
+akuzativoPlurala(ĉeno) #ĉu vorto estas substantivo azukativa singulara aŭ plurala
+AŭŜanĝo(ĉeno) #Ŝanĝo de vortoj kiuj finiĝas je -aŭ per -ez
 
 pronomoj(ĉeno) #Legas la frazeron kaj diras ĉu ĝi estas pronomo
 #TODO pronomoj() kaj aliaj metodoj devos anstataŭi la frazeron en la liston de vortoj "frazo"
