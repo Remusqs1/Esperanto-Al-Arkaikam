@@ -12,40 +12,63 @@ def AŭŜanĝo(matrico):
             matrico.insert(index, Vortez)
     return (matrico)
 
-def substantivoSingulara(matrico):
+def Substantivo(matrico):
     for i in range(len(matrico)):
         index=matrico.index(matrico[i])
         if matrico[i][-1]=="o":
             Vortom=(matrico[i]+"m").capitalize() #Arkaike, substantivo estas ĉiam skribita majuskle je kia ajn kazo
             matrico.remove(matrico[i])
             matrico.insert(index, Vortom)
-    return (matrico)
-
-def substantivoPlurala(matrico):
-    for i in range(len(matrico)):
-        index=matrico.index(matrico[i])
-        if matrico[i][-1]=="j":
+        elif matrico[i][-2:]=="oj": #Same sed ne plurale
             matrico[i]=matrico[i][:-1]
-            Vortoy=(matrico[i]+"y").capitalize() #Arkaike, substantivo estas ĉiam skribita majuskle je kia ajn kazo
+            Vortoy=(matrico[i]+"y").capitalize() 
             matrico.remove(matrico[i])
-            matrico.insert(index, Vortoy)
-    return (matrico)
+            matrico.insert(index, Vortoy)            
 
-def akuzativoPlurala(matrico):
+def Adjektivo(matrico):
     for i in range(len(matrico)):
         index=matrico.index(matrico[i])
-        if matrico[i][-2:]=="jn":
+        if matrico[i][-1]=="a":
+            Vortom=(matrico[i]+"m")
+            matrico.remove(matrico[i])
+            matrico.insert(index, Vortom)
+        elif matrico[i][-2:]=="aj": #Same sed ne plurale
+            matrico[i]=matrico[i][:-1]
+            Vortoy=(matrico[i]+"y")
+            matrico.remove(matrico[i])
+            matrico.insert(index, Vortoy)            
+    return (matrico)
+
+def Akuzativo(matrico):
+    for i in range(len(matrico)):
+        index=matrico.index(matrico[i])
+        if matrico[i][-3:]=="ojn":
             matrico[i]=matrico[i][:-2]
             Vortoyn=(matrico[i]+"yn").capitalize() #Arkaike, substantivo estas ĉiam skribita majuskle je kia ajn kazo
             matrico.remove(matrico[i])
             matrico.insert(index, Vortoyn)
-        elif (matrico[i][-2:]=="on"): #Same sed ne plurale
+        elif matrico[i][-2:]=="on": #Same sed ne plurale
             Vorton=matrico[i].capitalize()
             matrico.remove(matrico[i])
             matrico.insert(index, Vorton)
+        elif matrico[i][-3:]=="ajn": #Por adjektivo plurala. Singulara resta senŝanĝe
+            matrico[i]=matrico[i][:-2]
+            Vortayn=(matrico[i]+"yn")
+            matrico.remove(matrico[i])
+            matrico.insert(index, Vortayn)
     return (matrico)
 
-def pronomoj(matrico):
+def Adverbo(matrico):
+    for i in range(len(matrico)):
+        index=matrico.index(matrico[i])
+        if matrico[i][-1]=="e":
+            matrico[i]=matrico[i][:-1]
+            Vortoyn=(matrico[i]+"œ")
+            matrico.remove(matrico[i])
+            matrico.insert(index, Vortoyn)
+    return (matrico)    
+
+def Pronomoj(matrico):
     for i in range(len(matrico)):
         index=matrico.index(matrico[i])
         if matrico[i] in pronomaListo:
@@ -68,13 +91,13 @@ def pronomoj(matrico):
             elif (matrico[i]== "si"):
                 matrico[i]="sihi"
 
-def artikoloDifinitaForigado(matrico):
+def ArtikoloDifinitaForigado(matrico):
     for i in range(len(matrico)):
         if matrico[i] == "la":
             matrico.remove(matrico[i])
             return matrico
 
-def kunigado(matrico):
+def Kunigado(matrico):
     frazoT=" "
     frazoT=frazoT.join(matrico)
     print(frazoT)
