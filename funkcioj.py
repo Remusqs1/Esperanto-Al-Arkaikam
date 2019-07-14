@@ -2,15 +2,18 @@
 
 pronomaListo = ['mi', 'vi', 'ci', 'li', 'ŝi', 'ĝi', 'ili', 'ni', 'si']
 
-def substantivoSingulara(vorto):
-    Vorto=vorto.capitalize()#Arkaike, substantivo estas ĉiam skribita majuskle je kia ajn kazo
-    Vorto=Vorto+"m"
-
-    return (Vorto)
-
-# substantivoSingulara(vorto)
+def substantivoSingulara(matrico):
+    for i in range(len(matrico)):
+        if matrico[i][-1]=="o":
+            index=matrico.index(matrico[i])
+            Ĉenom=(matrico[i]+"m").capitalize() #Arkaike, substantivo estas ĉiam skribita majuskle je kia ajn kazo
+            matrico.remove(matrico[i])
+            matrico.insert(index, Ĉenom)
+    print(matrico)#Forigota
+    return (matrico)
 
 def pronomoj(vorto):
+    #TODO anstataŭi la pronomon en la liston
     for i in range(len(vorto)):
         if vorto[i] in pronomaListo:
             if (vorto[i]== "mi"):
