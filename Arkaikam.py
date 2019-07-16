@@ -9,7 +9,6 @@ frazo=input("Enigu vian frazon: ").lower()
 ĉeno=frazo.split(" ")
 
 #Forigas la difinitan artikolon "la", TODO kie enmeti cxi tion unue?
-
 ĉeno=ArtikoloDifinitaForigado(ĉeno) #ĉeno estas anstataŭata per la renodaĵo el ArtikoloDifinitaForigado
 SpecialajŜanĝoj(ĉeno)
 
