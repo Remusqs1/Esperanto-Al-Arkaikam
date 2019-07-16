@@ -1,6 +1,14 @@
-pronomaListo = ['mi', 'vi', 'ci', 'li', 'ŝi', 'ĝi', 'ili', 'ni', 'si']
-
 # TODO listo kaj traduko de specialaj vortoj
+
+def SpecialajŜanĝoj(matrico):
+    specialaListo = ['fraŭlo', "fraŭlino"]
+    for i in range(len(matrico)):
+        if matrico[i] in specialaListo:
+            if (matrico[i]== "fraŭlo"):
+                matrico[i]="scùiro"
+            elif (matrico[i]== "fraŭlino"):
+                matrico[i]="damselo"
+    return (matrico)
 
 def AŭŜanĝo(matrico):
     for i in range(len(matrico)):
@@ -12,6 +20,14 @@ def AŭŜanĝo(matrico):
             matrico.insert(index, Vortez)
     return (matrico)
 
+def ArtikoloDifinitaForigado(matrico):
+    provizoraListo=[]
+    for i in matrico:
+        if (i != "la"):
+            provizoraListo.append(i)
+    matrico = provizoraListo
+    return matrico
+            
 def Substantivo(matrico):
     for i in range(len(matrico)):
         index=matrico.index(matrico[i])
@@ -69,8 +85,8 @@ def Adverbo(matrico):
     return (matrico)    
 
 def Pronomoj(matrico):
+    pronomaListo = ['mi', 'vi', 'ci', 'li', 'ŝi', 'ĝi', 'ili', 'ni', 'si']
     for i in range(len(matrico)):
-        index=matrico.index(matrico[i])
         if matrico[i] in pronomaListo:
             if (matrico[i]== "mi"):
                 matrico[i]="mihi"
@@ -90,12 +106,6 @@ def Pronomoj(matrico):
                 matrico[i]="nos"
             elif (matrico[i]== "si"):
                 matrico[i]="sihi"
-
-def ArtikoloDifinitaForigado(matrico):
-    for i in range(len(matrico)):
-        if matrico[i] == "la":
-            matrico.remove(matrico[i])
-            return matrico
 
 def Kunigado(matrico):
     frazoT=" "
