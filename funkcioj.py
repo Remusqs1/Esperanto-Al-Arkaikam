@@ -196,7 +196,7 @@ def Pronomoj(matrico):
 
 
 def Verboj(matrico):
-    #TODO Nur funkcias la unua fojo je pronomo, la vortordo ne estas libera
+    #TODO Nur funkcias la unua fojo po pronomo, la vortordo ne estas libera
     for i in range(len(matrico)):
         provizoraListo = matrico        
         index = provizoraListo.index(provizoraListo[i])
@@ -213,7 +213,9 @@ def Verboj(matrico):
                 provizoraListo.remove(provizoraListo[index+1])
                 provizoraListo.insert(index+1, Verbom)
     matrico=provizoraListo
-    return matrico
+    return matrico 
+
+    #Provi, for i in matrico, novaListo=[]---> if true--> sxangxi kaj append al nL, else nur append al nL ---> matrico = nL
 
     #Provo solvi, ne funkciis, sed eble la solvo iras en cxi tiu vojo
     # provizoraListo = matrico    
