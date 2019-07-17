@@ -17,7 +17,7 @@ Substantivo(ĉeno)
 Adjektivo(ĉeno)
 Adverbo(ĉeno)
 Akuzativo(ĉeno) #ĉu vorto estas substantivo azukativa singulara aŭ plurala
-AŭŜanĝo(ĉeno) #Ŝanĝo de vortoj kiuj finiĝas je -aŭ per -ez
+AŭAnstataŭado(ĉeno) #Ŝanĝo de vortoj kiuj finiĝas je -aŭ per -ez
 
 Pronomoj(ĉeno) #Legas la frazeron kaj diras ĉu ĝi estas pronomo
 #TODO pronomoj() kaj aliaj metodoj devos anstataŭi la frazeron en la liston de vortoj "frazo"

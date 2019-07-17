@@ -97,7 +97,7 @@ def SpecialajŜanĝoj(matrico):
                 matrico[i]="cùanquaŭ"
     return (matrico)
 
-def AŭŜanĝo(matrico):
+def AŭAnstataŭado(matrico):
     for i in range(len(matrico)):
         index=matrico.index(matrico[i])
         if matrico[i][-2:]=="aŭ":
