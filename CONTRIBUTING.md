@@ -21,4 +21,4 @@ Puede que entonces este proyecto no sea el más adecuado para tí,
 pero igual puedes intentarlo ¿Tal vez con una Interfaz gráfica de usuario -GUI-? Propuestas también son bienvenidas.
 
 Then maybe this project is not suitable for you, but you can still try,
-Maybe with a graphical user interface -GUI-? Proposals are also welcome.
+maybe with a graphical user interface -GUI-? Proposals are also welcome.
