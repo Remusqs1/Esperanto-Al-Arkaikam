@@ -11,7 +11,7 @@ frazo=input("Enigu vian frazon: ").lower()
 #Forigas la difinitan artikolon "la", TODO kie enmeti cxi tion unue?
 ĉeno=ArtikoloDifinitaForigado(ĉeno) #ĉeno estas anstataŭata per la renodaĵo el ArtikoloDifinitaForigado
 SpecialajŜanĝoj(ĉeno)
-
+ĉeno=Verboj(ĉeno)
 #Jen funkcio por scii ĉu vorto estas substantivo aŭ ne, se jes, konjugacias arkaike
 Substantivo(ĉeno)
 Adjektivo(ĉeno)

@@ -194,6 +194,40 @@ def Pronomoj(matrico):
             elif (matrico[i]== "si"):
                 matrico[i]="sihi"
 
+
+def Verboj(matrico):
+    #TODO Nur funkcias la unua fojo je pronomo, la vortordo ne estas libera
+    for i in range(len(matrico)):
+        provizoraListo = matrico        
+        index = provizoraListo.index(provizoraListo[i])
+        if matrico[i] == "mi":
+            if matrico[index+1][-2:] == "as":
+                provizoraListo[index+1] = provizoraListo[index+1][:-1]
+                Verbom = (provizoraListo[index+1]+"ms")
+                provizoraListo.remove(provizoraListo[index+1])
+                provizoraListo.insert(index+1, Verbom)
+        if matrico[i] == "vi":
+            if matrico[index+1][-2:] == "as":
+                provizoraListo[index+1] = provizoraListo[index+1][:-1]
+                Verbom = (provizoraListo[index+1]+"is")
+                provizoraListo.remove(provizoraListo[index+1])
+                provizoraListo.insert(index+1, Verbom)
+    matrico=provizoraListo
+    return matrico
+
+    #Provo solvi, ne funkciis, sed eble la solvo iras en cxi tiu vojo
+    # provizoraListo = matrico    
+    # for i in matrico:
+    #     index = provizoraListo.index(i)
+    #     if i == "mi":
+    #         if matrico[index+1][-2:] == "as":
+    #             provizoraListo[index+1] = provizoraListo[index+1][:-1]
+    #             Verbom = (provizoraListo[index+1]+"ms")
+    #             provizoraListo.remove(provizoraListo[index+1])
+    #             provizoraListo.insert(index+1, Verbom)
+    #     matrico = provizoraListo
+    # return matrico    
+
 def Kunigado(matrico):
     frazoT=" "
     frazoT=frazoT.join(matrico)
