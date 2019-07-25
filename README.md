@@ -12,6 +12,10 @@ Projekto disvolviĝanta sur Python. Kreinto nuntempe malregas kodumadon kaj okup
 
 https://eo.wikipedia.org/wiki/Arcaicam_Esperantom
 
+## Pri kiel kontribui
+
+Se vi volas scii kiel kontribui al ĉi tiu projekton legu tion ĉi: [Kiel kontribui](https://github.com/Remusqs1/Esperanto-Al-Arkaikam/blob/master/CONTRIBUTING.md)
+
 ## Subtenu ĉi tiun projekton
 Vi povas subteni ĉi-projekton plurmaniere, ekzemple pere de bieroj :beers:!
 
