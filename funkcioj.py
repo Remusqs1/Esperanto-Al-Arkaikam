@@ -196,39 +196,44 @@ def Pronomoj(matrico):
 
 
 def Verboj(matrico):
-    #TODO Nur funkcias la unua fojo po pronomo, la vortordo ne estas libera
+    #Vortordo ne estas libera
+    #Ĉu uzi ĉi-metodon por nur as-verboj kaj krei metodon po ĉiu tempo?
     for i in range(len(matrico)):
         provizoraListo = matrico        
         index = provizoraListo.index(provizoraListo[i])
         if matrico[i] == "mi":
-            if matrico[index+1][-2:] == "as":
-                provizoraListo[index+1] = provizoraListo[index+1][:-1]
-                Verbom = (provizoraListo[index+1]+"ms")
-                provizoraListo.remove(provizoraListo[index+1])
-                provizoraListo.insert(index+1, Verbom)
-        if matrico[i] == "vi":
-            if matrico[index+1][-2:] == "as":
-                provizoraListo[index+1] = provizoraListo[index+1][:-1]
-                Verbom = (provizoraListo[index+1]+"is")
-                provizoraListo.remove(provizoraListo[index+1])
-                provizoraListo.insert(index+1, Verbom)
+            if matrico[i+1][-2:] == "as":
+                provizoraListo[i+1] = provizoraListo[i+1][:-1]
+                Verbom = (provizoraListo[i+1]+"ms")
+                provizoraListo.remove(provizoraListo[i+1])
+                provizoraListo.insert(i+1, Verbom)
+        elif matrico[i] == "vi":
+            if matrico[i+1][-2:] == "as":
+                provizoraListo[i+1] = provizoraListo[i+1][:-1]
+                Verbom = (provizoraListo[i+1]+"is")
+                provizoraListo.remove(provizoraListo[i+1])
+                provizoraListo.insert(i+1, Verbom)
+        elif (matrico[i] == "ŝi" or matrico[i] == "li" or matrico[i] == "ĝi"):
+            if matrico[i+1][-2:] == "as":
+                provizoraListo[i+1] = provizoraListo[i+1][:-1]
+                Verbom = (provizoraListo[i+1]+"t")
+                provizoraListo.remove(provizoraListo[i+1])
+                provizoraListo.insert(i+1, Verbom)
+        elif matrico[i] == "ni":
+            if matrico[i+1][-2:] == "as":
+                provizoraListo[i+1] = provizoraListo[i+1][:-1]
+                Verbom = (provizoraListo[i+1]+"ims")
+                provizoraListo.remove(provizoraListo[i+1])
+                provizoraListo.insert(i+1, Verbom)
+        elif matrico[i] == "ili":
+            if matrico[i+1][-2:] == "as":
+                provizoraListo[i+1] = provizoraListo[i+1][:-1]
+                Verbom = (provizoraListo[i+1]+"it")
+                provizoraListo.remove(provizoraListo[i+1])
+                provizoraListo.insert(i+1, Verbom)
     matrico=provizoraListo
     return matrico 
 
-    #Provi, for i in matrico, novaListo=[]---> if true--> sxangxi kaj append al nL, else nur append al nL ---> matrico = nL
-
-    #Provo solvi, ne funkciis, sed eble la solvo iras en cxi tiu vojo
-    # provizoraListo = matrico    
-    # for i in matrico:
-    #     index = provizoraListo.index(i)
-    #     if i == "mi":
-    #         if matrico[index+1][-2:] == "as":
-    #             provizoraListo[index+1] = provizoraListo[index+1][:-1]
-    #             Verbom = (provizoraListo[index+1]+"ms")
-    #             provizoraListo.remove(provizoraListo[index+1])
-    #             provizoraListo.insert(index+1, Verbom)
-    #     matrico = provizoraListo
-    # return matrico    
 
 def Kunigado(matrico):
     frazoT=" "
