@@ -1,5 +1,5 @@
 # TODO listo kaj traduko de specialaj vortoj
-
+from iloj import *
 
 def AŭAnstataŭado(matrico):
     for i in range(len(matrico)):
@@ -11,7 +11,6 @@ def AŭAnstataŭado(matrico):
             matrico.insert(index, Vortez)
     return (matrico)
 
-
 def ArtikoloDifinitaForigado(matrico):
     provizoraListo = []
     for i in matrico:
@@ -19,7 +18,6 @@ def ArtikoloDifinitaForigado(matrico):
             provizoraListo.append(i)
     matrico = provizoraListo
     return matrico
-
 
 def Substantivo(matrico):
     for i in range(len(matrico)):
@@ -35,7 +33,6 @@ def Substantivo(matrico):
             matrico.remove(matrico[i])
             matrico.insert(index, Vortoy)
 
-
 def Adjektivo(matrico):
     for i in range(len(matrico)):
         index = matrico.index(matrico[i])
@@ -49,7 +46,6 @@ def Adjektivo(matrico):
             matrico.remove(matrico[i])
             matrico.insert(index, Vortoy)
     return (matrico)
-
 
 def Akuzativo(matrico):
     for i in range(len(matrico)):
@@ -71,7 +67,6 @@ def Akuzativo(matrico):
             matrico.insert(index, Vortayn)
     return (matrico)
 
-
 def Adverbo(matrico):
     for i in range(len(matrico)):
         index = matrico.index(matrico[i])
@@ -82,46 +77,60 @@ def Adverbo(matrico):
             matrico.insert(index, Vortoyn)
     return (matrico)
 
-
 def Verboj(matrico):
+    pronomoj=pronomaListo()
+    verbajFinaĵoj = ["as", "is", "os", "us"] #Sen imperativo
     #Vortordo ne estas libera
-    #Ĉu uzi ĉi-metodon por nur as-verboj kaj krei metodon po ĉiu tempo?
+    #Ci-verbon restas senŝanĝaj
     for i in range(len(matrico)):
-        provizoraListo = matrico
-        try:
-            if matrico[i] == "mi":
-                if matrico[i+1][-2:] == "as":
-                    provizoraListo[i+1] = provizoraListo[i+1][:-1]
-                    Verbom = (provizoraListo[i+1]+"ms")
-                    provizoraListo.remove(provizoraListo[i+1])
-                    provizoraListo.insert(i+1, Verbom)
-            elif matrico[i] == "vi":
-                if matrico[i+1][-2:] == "as":
-                    provizoraListo[i+1] = provizoraListo[i+1][:-1]
-                    Verbom = (provizoraListo[i+1]+"is")
-                    provizoraListo.remove(provizoraListo[i+1])
-                    provizoraListo.insert(i+1, Verbom)
-            elif (matrico[i] == "ŝi" or matrico[i] == "li" or matrico[i] == "ĝi"):
-                if matrico[i+1][-2:] == "as":
-                    provizoraListo[i+1] = provizoraListo[i+1][:-1]
-                    Verbom = (provizoraListo[i+1]+"t")
-                    provizoraListo.remove(provizoraListo[i+1])
-                    provizoraListo.insert(i+1, Verbom)
-            elif matrico[i] == "ni":
-                if matrico[i+1][-2:] == "as":
-                    provizoraListo[i+1] = provizoraListo[i+1][:-1]
-                    Verbom = (provizoraListo[i+1]+"ims")
-                    provizoraListo.remove(provizoraListo[i+1])
-                    provizoraListo.insert(i+1, Verbom)
-            elif matrico[i] == "ili":
-                if matrico[i+1][-2:] == "as":
-                    provizoraListo[i+1] = provizoraListo[i+1][:-1]
-                    Verbom = (provizoraListo[i+1]+"it")
-                    provizoraListo.remove(provizoraListo[i+1])
-                    provizoraListo.insert(i+1, Verbom)
-            else:
-                matrico = provizoraListo
-        except:
-            pass
-    matrico = provizoraListo
+        if matrico[i] in pronomoj:
+            provizoraListo = matrico
+            try:
+                if matrico[i] == "mi":
+                    if matrico[i+1][-2:] in verbajFinaĵoj:
+                        provizoraListo[i+1] = provizoraListo[i+1][:-1]
+                        Verbom = (provizoraListo[i+1]+"ms")
+                        provizoraListo.remove(provizoraListo[i+1])
+                        provizoraListo.insert(i+1, Verbom)
+                elif matrico[i] == "vi":
+                    if matrico[i+1][-2:] in verbajFinaĵoj:
+                        provizoraListo[i+1] = provizoraListo[i+1][:-1]
+                        Verbom = (provizoraListo[i+1]+"is")
+                        provizoraListo.remove(provizoraListo[i+1])
+                        provizoraListo.insert(i+1, Verbom)
+                    elif matrico[i+1][-1:] == "u":
+                        Verbom = (provizoraListo[i+1]+"y")
+                        provizoraListo.remove(provizoraListo[i+1])
+                        provizoraListo.insert(i+1, Verbom)
+                elif (matrico[i] == "ŝi" or matrico[i] == "li" or matrico[i] == "ĝi"):
+                    if matrico[i+1][-2:] in verbajFinaĵoj:
+                        provizoraListo[i+1] = provizoraListo[i+1][:-1]
+                        Verbom = (provizoraListo[i+1]+"t")
+                        provizoraListo.remove(provizoraListo[i+1])
+                        provizoraListo.insert(i+1, Verbom)
+                elif matrico[i] == "ni":
+                    if matrico[i+1][-2:] in verbajFinaĵoj:
+                        provizoraListo[i+1] = provizoraListo[i+1][:-1]
+                        Verbom = (provizoraListo[i+1]+"ims")
+                        provizoraListo.remove(provizoraListo[i+1])
+                        provizoraListo.insert(i+1, Verbom)
+                    elif matrico[i+1][-1:] == "u":
+                        Verbom = (provizoraListo[i+1]+"y")
+                        provizoraListo.remove(provizoraListo[i+1])
+                        provizoraListo.insert(i+1, Verbom)
+                elif matrico[i] == "ili":
+                    if matrico[i+1][-2:] in verbajFinaĵoj:
+                        provizoraListo[i+1] = provizoraListo[i+1][:-1]
+                        Verbom = (provizoraListo[i+1]+"it")
+                        provizoraListo.remove(provizoraListo[i+1])
+                        provizoraListo.insert(i+1, Verbom)
+                    elif matrico[i+1][-1:] == "u":
+                        Verbom = (provizoraListo[i+1]+"y")
+                        provizoraListo.remove(provizoraListo[i+1])
+                        provizoraListo.insert(i+1, Verbom)
+                else:
+                    matrico = provizoraListo
+            except:
+                pass
+            matrico = provizoraListo
     return matrico

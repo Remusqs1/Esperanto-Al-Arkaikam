@@ -1,6 +1,5 @@
 from iloj import *
 
-
 def pronomaVortaro(enigo):
 
     pronomaVortaro = {'mi': 'mihi', 'vi': 'wos', 'ci': 'tu', 'li': 'lùi',

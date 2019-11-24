@@ -24,8 +24,6 @@ AŭAnstataŭado(ĉeno)  # Ŝanĝo de vortoj kiuj finiĝas je -aŭ per -ez
 
 #Ĝi kunigas la frazerojn kaj redonas tradukitan frazon
 frazo = kunigado(ĉeno)
-
 frazo = pronomaVortaro(frazo)  # Legas la frazon kaj diras ĉu ĝi estas pronomo
-#TODO pronomoj() kaj aliaj metodoj devos anstataŭi la frazeron en la liston de vortoj "frazo"
 
 print(frazo)
