@@ -26,7 +26,8 @@ def specialajVortoj(enigo):
                        'ktp': 'etc', 'sinjoro': 'sinyoro', 'sinjorino': 'mesiro', 't.e.': 'ite',
                        't.e': 'ite', 'tre': 'trez', 'sur': 'sobrez', 'kaj': 'ed', 'al': 'ad',
                        'aŭ': 'aù', 'ĉe': 'chez', 'ĝis': 'ghisquez', 'en': 'in', 'el': 'ex',
-                       'ekster': 'extrum', 'ekde': 'ab', 'kontraŭ': 'contraŭ', 'kvankam': 'cùanquaŭ'}
+                       'ekster': 'extrum', 'ekde': 'ab', 'kontraŭ': 'contraŭ', 'kvankam': 'cùanquaŭ',
+                       'ne' : 'ned'}
     for ŝlosilo in specialaVortaro:
         matrico = dividado(enigo)
         for i in range(len(matrico)):

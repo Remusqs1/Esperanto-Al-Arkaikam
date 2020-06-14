@@ -11,5 +11,5 @@ def kunigado(matrico):
     return frazo
 
 def pronomaListo():
-    pronomaListo = ['mi', 'vi', 'ci', 'li', 'ŝi', 'ĝi', 'ili', 'ni', 'si']
+    pronomaListo = ['mi', 'vi', 'ci', 'li', 'ŝi', 'ĝi', 'ili', 'ni', 'si', 'oni']
     return pronomaListo

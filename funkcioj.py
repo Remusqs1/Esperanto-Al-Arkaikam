@@ -102,7 +102,7 @@ def Verboj(matrico):
                         Verbom = (provizoraListo[i+1]+"y")
                         del provizoraListo[i+1]
                         provizoraListo.insert(i+1, Verbom)
-                elif (matrico[i] == "ŝi" or matrico[i] == "li" or matrico[i] == "ĝi"):
+                elif (matrico[i] == "ŝi" or matrico[i] == "li" or matrico[i] == "ĝi" or matrico[i] == "oni"):
                     if matrico[i+1][-2:] in verbajFinaĵoj:
                         provizoraListo[i+1] = provizoraListo[i+1][:-1]
                         Verbom = (provizoraListo[i+1]+"t")
@@ -146,6 +146,11 @@ def prefiksigi(matrico):
                 vorto = "on"+matrico[i+1]
                 del matrico[i:i+2]
                 matrico.insert(i, vorto)
+            elif matrico[i] == "al" or matrico[i] == "ad":
+                if(matrico[i+1] in pronomaListo() or matrico[i+1]=="oni"):
+                    vorto = "ad"+matrico[i+1]
+                    del matrico[i:i+2]
+                    matrico.insert(i, vorto)
         except:
             pass
     return (matrico)
