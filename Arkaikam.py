@@ -21,6 +21,7 @@ Adjektivo(ĉeno)
 Adverbo(ĉeno)
 Akuzativo(ĉeno)  # ĉu vorto estas substantivo azukativa singulara aŭ plurala
 AŭAnstataŭado(ĉeno)  # Ŝanĝo de vortoj kiuj finiĝas je -aŭ per -ez
+prefiksigi(ĉeno)  # Prefiksigas vortojn. Nepre ĉi tiu metodo estu unu el la lastaj
 
 #Ĝi kunigas la frazerojn kaj redonas tradukitan frazon
 frazo = kunigado(ĉeno)

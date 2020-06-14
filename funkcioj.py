@@ -134,3 +134,31 @@ def Verboj(matrico):
                 pass
             matrico = provizoraListo
     return matrico
+
+# TODO gxi forigas cxiun matrico[i] teksto egala al alia kaj ne anstatauxas la prefikson
+def prefiksigi(matrico):
+    for i in range(len(matrico)):
+        try:
+            if matrico[i] == "ĉi":
+                vorto = "is"+matrico[i+1]
+                matrico.remove(matrico[i+1])
+                matrico.remove(matrico[i])
+                matrico.insert(i, vorto)
+            elif matrico[i] == "oni":
+                vorto = "on"+matrico[i+1]
+                matrico.remove(matrico[i+1])
+                matrico.remove(matrico[i])
+                matrico.insert(i, vorto)
+        except:
+                pass
+    return (matrico)
+
+# def AŭAnstataŭado(matrico):
+#     for i in range(len(matrico)):
+#         index = matrico.index(matrico[i])
+#         if matrico[i][-2:] == "aŭ":
+#             matrico[i] = matrico[i][:-2]
+#             Vortez = (matrico[i]+"ez")
+#             matrico.remove(matrico[i])
+#             matrico.insert(index, Vortez)
+#     return (matrico)
