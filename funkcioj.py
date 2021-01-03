@@ -1,5 +1,6 @@
 # TODO listo kaj traduko de specialaj vortoj
 from iloj import pronomaListo
+from vortaroj import pronomaVortaro
 
 def AŭAnstataŭado(matrico):
     for i in range(len(matrico)):
@@ -154,3 +155,14 @@ def prefiksigi(matrico):
         except:
             pass
     return (matrico)
+
+def Pronomoj(matrico):
+    pronomoj = pronomaListo()
+    for i in range(len(matrico)):
+        try:
+            if matrico[i][:2] in pronomoj or matrico[i][:3] in pronomoj:
+                matrico[i] = pronomaVortaro(matrico[i])
+                
+        except:
+            pass
+    return matrico

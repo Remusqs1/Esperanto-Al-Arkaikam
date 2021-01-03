@@ -3,14 +3,13 @@
 import tkinter as tk, os, sys
 
 from funkcioj import *
-from vortaroj import *
+from vortaroj import specialajVortoj
 from iloj import *
 
 def arkaikam():
 
     #TODO nuntempe ne uzu interpunkcion
-    # frazo = input("Enigu vian frazon: ").lower()
-    frazo = kadro.get("1.0",'end-1c').lower()
+    frazo = kadro.get("1.0",'end-1c').strip().lower()
     frazo = specialajVortoj(frazo)
 
     #Dividas la vortojn de la frazo laŭ malplena spaco. TODO Poste ĉiu ero estos legita kaj kategoriita laŭ finaĵo.
@@ -26,8 +25,8 @@ def arkaikam():
     prefiksigi(ĉeno)  # Prefiksigas vortojn. Nepre ĉi tiu metodo estu unu el la lastaj
 
     #Ĝi kunigas la frazerojn kaj redonas tradukitan frazon
+    frazo = Pronomoj(ĉeno)  # Legas la frazon kaj tradukas la pronomojn
     frazo = kunigado(ĉeno)
-    frazo = pronomaVortaro(frazo)  # Legas la frazon kaj tradukas la pronomojn
 
     #Montras la rezulton en rezultaKadro
     rezultaKadro.configure(state="normal")

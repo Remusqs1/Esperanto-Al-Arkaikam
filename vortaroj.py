@@ -2,8 +2,16 @@ from iloj import dividado, kunigado
 
 def pronomaVortaro(enigo):
 
-    pronomaVortaro = {'mi': 'Mihi', 'vi': 'Wos', 'ci': 'Tu', 'li': 'Lùi',
-                      'ŝi': 'Eshi', 'ĝi': 'Eghi', 'ili': 'Ilùi', 'ni': 'Nos', 'si': 'Sihi'}
+    #Ne majuskliĝas #TODO krei kodon por anstataŭi ĉi tiu vortaron
+    pronomaVortaro = {'mi': 'mihi', 'miam': 'miham', 'miay': 'mihaym', 'min': 'mihin', 'mian': 'mihan', 'miayn': 'mihayn', 'mies': 'mihes',
+                      'ci': 'tu', 'ciam': 'tuam', 'ciay': 'tuay', 'cin': 'tuin', 'cian': 'tuan', 'ciayn': 'tuayn', 'cies': 'tues',
+                      'vi': 'wos', 'viam': 'wosam', 'viay': 'wosay', 'vin': 'wosin', 'vian': 'wosan', 'viayn': 'wosayn', 'vies': 'woses',
+                      'li': 'lùi', 'liam': 'lùiam', 'liay': 'lùiay', 'lin': 'lùin', 'lian': 'lùian', 'liayn': 'lùiayn', 'lies': 'lùies',
+                      'ŝi': 'eshi', 'ŝiam': 'eshiam', 'ŝiay': 'eshiay', 'ŝin': 'eshin', 'ŝian': 'eshian', 'ŝiayn': 'eshiayn', 'ŝies': 'eshies',
+                      'ĝi': 'eghi', 'ĝiam': 'eghiam', 'ĝiay': 'eghiay', 'ĝin': 'eghin', 'ĝian': 'eghian', 'ĝiayn': 'eghiayn', 'ĝies': 'eghies',
+                      'ili': 'ilùi', 'iliam': 'ilùiam', 'iliay': 'ilùiay', 'ilin': 'ilùin', 'ilian': 'ilùian', 'iliayn': 'ilùiayn', 'ilies': 'ilùies',
+                      'ni': 'nos', 'niam': 'nosam', 'niay': 'nosay', 'nin': 'nosin', 'nian': 'nosan', 'niayn': 'nosayn', 'nies': 'noses',
+                      'si': 'sihi', 'siam': 'siham', 'siay': 'sihay', 'sin': 'sihin', 'sian': 'sihan', 'siayn': 'sihayn', 'sies': 'sihes',}
 
     for ŝlosilo in pronomaVortaro:
         matrico = dividado(enigo)
