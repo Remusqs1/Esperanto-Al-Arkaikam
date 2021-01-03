@@ -1,5 +1,5 @@
 # TODO listo kaj traduko de specialaj vortoj
-from iloj import *
+from iloj import pronomaListo
 
 def AŭAnstataŭado(matrico):
     for i in range(len(matrico)):

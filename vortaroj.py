@@ -1,9 +1,9 @@
-from iloj import *
+from iloj import dividado, kunigado
 
 def pronomaVortaro(enigo):
 
-    pronomaVortaro = {'mi': 'mihi', 'vi': 'wos', 'ci': 'tu', 'li': 'lùi',
-                      'ŝi': 'eshi', 'ĝi': 'eghi', 'ili': 'ilùi', 'ni': 'nos', 'si': 'sihi'}
+    pronomaVortaro = {'mi': 'Mihi', 'vi': 'Wos', 'ci': 'Tu', 'li': 'Lùi',
+                      'ŝi': 'Eshi', 'ĝi': 'Eghi', 'ili': 'Ilùi', 'ni': 'Nos', 'si': 'Sihi'}
 
     for ŝlosilo in pronomaVortaro:
         matrico = dividado(enigo)
