@@ -18,9 +18,21 @@ def Artikoloj(matrico):
     for i in range(len(matrico)):
         index = matrico.index(matrico[i])
         if (matrico[i] != "la"):
-            if(kontroliVortoKlason(matrico[i], VortoKlaso.SUBSTANTIVO) and (matrico[i-1] != "la")):
+            if(kontroliVortoKlason(matrico[i], VortoKlaso.ADJEKTIVO)
+                                  and (matrico[i-1] != "la") and (matrico[i][:4] not in ("plur", "mult")) #ĉu ankaŭ ne in "kelk"?
+                                  and (kontroliVortoKlason(matrico[i-1], VortoKlaso.ADJEKTIVO) == False)
+                                  ):
                 provizoraListo.insert(index+nombrilo, "unn")
                 nombrilo+=1
+            elif(kontroliVortoKlason(matrico[i], VortoKlaso.SUBSTANTIVO)
+                                  and (matrico[i-1] != "la") and (matrico[i][:4] != "plur")
+                                  and (kontroliVortoKlason(matrico[i-1], VortoKlaso.ADJEKTIVO) == False)
+                                  ):
+                provizoraListo.insert(index+nombrilo, "unn")
+                nombrilo+=1
+            # elif(kontroliVortoKlason(matrico[i], VortoKlaso.SUBSTANTIVO) and (matrico[i-1] != "la")):
+            #     provizoraListo.insert(index+nombrilo, "unn")
+            #     nombrilo+=1
             provizoraListo.append(matrico[i])
     matrico = provizoraListo
     return matrico
