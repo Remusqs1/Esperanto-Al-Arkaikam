@@ -1,5 +1,5 @@
 # TODO listo kaj traduko de specialaj vortoj
-from iloj import pronomaListo
+from iloj import *
 from vortaroj import pronomaVortaro
 
 def AŭAnstataŭado(matrico):
@@ -12,15 +12,18 @@ def AŭAnstataŭado(matrico):
             matrico.insert(index, Vortez)
     return (matrico)
 
-def ArtikoloDifinitaForigado(matrico):
+def Artikoloj(matrico):
     provizoraListo = []
-    for i in matrico:
-        if (i != "la"):
-            provizoraListo.append(i)
+    for i in range(len(matrico)):
+        index = matrico.index(matrico[i])
+        if (matrico[i] != "la"):
+            if(kontroliVortoKlason(matrico[i], VortoKlaso.SUBSTANTIVO) and (matrico[i-1] != "la")):
+                provizoraListo.insert(index, "unn")
+            provizoraListo.append(matrico[i])
     matrico = provizoraListo
     return matrico
 
-def Substantivo(matrico):
+def Substantivo(matrico:list):
     for i in range(len(matrico)):
         index = matrico.index(matrico[i])
         if matrico[i][-1] == "o":
