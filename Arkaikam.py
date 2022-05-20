@@ -14,7 +14,7 @@ def arkaikam():
 
     #Dividas la vortojn de la frazo laŭ malplena spaco. TODO Poste ĉiu ero estos legita kaj kategoriita laŭ finaĵo.
     ĉeno = dividado(frazo)
-    ĉeno = ArtikoloDifinitaForigado(ĉeno)
+    ĉeno = Artikoloj(ĉeno)
     ĉeno = Verboj(ĉeno)
     #Jen funkcio por scii ĉu vorto estas substantivo aŭ ne, se jes, konjugacias arkaike kaj majuskligas
     Substantivo(ĉeno)
