@@ -1,6 +1,6 @@
 ### La celo de ĉi programeto estas ke uzanto enmetu frazon, ekz: Mi estas frazo,
 ### kaj la programo redonu tutan tradukon al Arkaikam: Mihi estams Frazom
-import tkinter as tk, os, sys
+import tkinter as tk
 
 from funkcioj import *
 from vortaroj import specialajVortoj
@@ -39,7 +39,7 @@ def arkaikam():
 #Ĉefa fenestro 
 fenestro = tk.Tk()
 fenestro.title("Tujtradukilo el Esperanto al Arkaika Esperanto")
-fenestro.geometry("700x200")
+fenestro.geometry("750x200")
 fenestro.resizable(False,False)
 
 # Mesaĝa kadro
@@ -60,5 +60,15 @@ rezultaKadro.place(x=10, y=135)
 traduko = tk.Label(fenestro, text = "Traduko:")
 traduko.place(x=10, y=110)
 #endregion
+
+#Kopii butonoj
+
+#Origina teksto
+butonoKopii = tk.Button(fenestro, text = "Kopii", command =  lambda: kopii(kadro))
+butonoKopii.place(x=700, y=25)
+
+#tradukita teksto
+butonoTraduko = tk.Button(fenestro, text = "Kopii", command =  lambda: kopii(rezultaKadro))
+butonoTraduko.place(x=700, y=135)
 
 fenestro.mainloop()
