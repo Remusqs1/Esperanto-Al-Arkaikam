@@ -1,5 +1,6 @@
 from enum import Enum
 from typing import Literal
+import tkinter as tk
 
 #TODO modifi por ke ĝi ankaŭ dividu je specialaj signoj kiel ", . ! ?", ĉar ili
 #malfunkciigas la dividadon
@@ -50,3 +51,9 @@ def kontroliVortoKlason(vorto : str ,vortoKlaso:VortoKlaso)-> bool:
     elif((vortoKlaso ==VortoKlaso.AKUZATIVO)  and vorto[-1] == "n"):
         eliro = True
     return eliro
+
+def kopii(kadro : tk.Text):
+    tekstoKopii = kadro.get("1.0",'end-1c')
+    r = tk.Tk()
+    r.withdraw()
+    r.clipboard_append(tekstoKopii)
