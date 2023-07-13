@@ -17,10 +17,6 @@ https://eo.wikipedia.org/wiki/Arcaicam_Esperantom
 Se vi volas scii kiel kontribui al ĉi tiu projekto legu tion ĉi: [Kiel kontribui](https://github.com/Remusqs1/Esperanto-Al-Arkaikam/blob/master/CONTRIBUTING.md)
 
 ## Subtenu ĉi tiun projekton
-Vi povas subteni ĉi-projekton plurmaniere, ekzemple pere de bieroj :beers:!
-
-[![Beerpay](https://beerpay.io/Remusqs1/Esperanto-Al-Arkaikam/badge.svg?style=beer-square)](https://beerpay.io/Remusqs1/Esperanto-Al-Arkaikam)  [![Beerpay](https://beerpay.io/Remusqs1/Esperanto-Al-Arkaikam/make-wish.svg?style=flat-square)](https://beerpay.io/Remusqs1/Esperanto-Al-Arkaikam?focus=wish)
-
-Aŭ subtenu min per kafo :coffee:!
+Vi povas subteni ĉi-projekton plurmaniere, ekzemple pere de kafo :coffee:!
 
 <a href="https://www.buymeacoffee.com/DLx2" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a> 
