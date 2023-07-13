@@ -1,4 +1,5 @@
 import tkinter as tk
+from iloj import kopii
 
 def krei_gui(arkaikam_revoko):
     #Ĉefa fenestro 
