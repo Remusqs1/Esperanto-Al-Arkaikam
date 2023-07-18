@@ -1,22 +1,17 @@
-﻿[![Esperanto](https://img.shields.io/badge/Esperanto-jes-green.svg)](https://eo.wikipedia.org/wiki/Esperanto)
-[![Arkaikam Esperanto](https://img.shields.io/badge/Arcaicam%20Esperantom-jes-green.svg)](https://eo.wikipedia.org/wiki/Arcaicam_Esperantom) [![Python](https://img.shields.io/github/languages/top/Remusqs1/Esperanto-Al-Arkaikam.svg?colorB=blue)](https://docs.python.org/)
-[![GNU GPL-3.0](https://img.shields.io/badge/permesilo-GPL--3.0-red.svg)](https://www.gnu.org/licenses/gpl-3.0.html)
+# TajpiSharp
 
+TajpiSharp estas programaro inspirita je Tajpi fare de Thomas James, sed konstruita entute je C# kaj Windows Form.
 
-# Esperanto-Al-Arkaikam
-Tujtradukilo el Esperanto al Arkaikam Esperantom
+Ĉi tiu programaro ankoraŭ estas disvolviĝanta.
 
-Projekto disvolviĝanta sur Python. Kreinto nuntempe malregas kodumadon kaj okupatas, do ĉia helpo bonvenas.
+## Insignoj
 
-## Pri Arcaicam Esperantom
+[![Remusqs1 - TajpiSharp](https://img.shields.io/static/v1?label=Remusqs1&message=TajpiSharp&color=blue&logo=github)](https://github.com/Remusqs1/TajpiSharp "Go to GitHub repo")
 
-https://eo.wikipedia.org/wiki/Arcaicam_Esperantom
+[![License](https://img.shields.io/badge/License-CC0_1.0-blue)](#license)
 
-## Pri kiel kontribui
+[![Esperanto](https://img.shields.io/badge/Esperanto-jes-green.svg)](https://eo.wikipedia.org/wiki/Esperanto)
 
-Se vi volas scii kiel kontribui al ĉi tiu projekto legu tion ĉi: [Kiel kontribui](https://github.com/Remusqs1/Esperanto-Al-Arkaikam/blob/master/CONTRIBUTING.md)
+## Permesilo
 
-## Subtenu ĉi tiun projekton
-Vi povas subteni ĉi-projekton plurmaniere, ekzemple pere de kafo :coffee:!
-
-<a href="https://www.buymeacoffee.com/DLx2" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a> 
+Released under [CC0 1.0](/LICENSE) by [@Remusqs1](https://github.com/Remusqs1).
